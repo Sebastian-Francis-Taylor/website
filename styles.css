@@ -2,11 +2,31 @@ body {
     background-color: #282828;
     color: #ebdbb2;
     font-family: 'Blex Mono Nerd Font', 'Courier New', monospace;
+    background-image: none;
+    padding-top: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 5%;
 }
 
 a {
     color: #d65d0e;
     font-weight: bold;
+}
+
+h1 {
+    font-size: 36pt;
+    font-style: bold;
+}
+
+p {
+    font-style: 24pt;
+    font-style: normal;
+}
+
+.grid {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    display: grid;
 }
 
 @font-face {
