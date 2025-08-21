@@ -1,0 +1,12 @@
+body {
+  background-color: #282828;
+  color: #ebdbb2;
+  font-family: 'Blex Mono Nerd Font', 'Courier New', monospace;
+}
+
+@font-face {
+    font-family: 'Blex Mono Nerd Font';
+    src: url('fonts/BlexMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
