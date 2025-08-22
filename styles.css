@@ -10,8 +10,12 @@ body {
 }
 
 a {
-    color: #d65d0e;
+    color: #fe8019;
     font-weight: bold;
+}
+
+a:hover {
+    color: #d65d0e;
 }
 
 h1 {
@@ -25,10 +29,10 @@ p {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 20px; 
+    display: flex;
+    gap: 20px;
     justify-content: center;
+    align-items: center;
     margin-bottom: 2%;
 }
 
