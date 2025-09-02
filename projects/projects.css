@@ -1,9 +1,11 @@
 @import url("../fonts/fonts.css");
+@import url("../themes/nord.css");
 
 body {
-    background-color: #2e3440;
-    color: #eceff4;
+    background-color: var(--nord0);
+    color: var(--nord6);
     font-family: 'Open Sans', 'Courier New';
+    font-size: 16px;
     margin: 0;
     margin-bottom: 20px;
 }
@@ -17,6 +19,19 @@ body {
     margin-bottom: 20px;
 }
 
+.muted-text {
+    color: var(--nord4);
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+.cool-line {
+    font-family: 'Blex Mono Nerd Font';
+    font-size: 16px;
+    font-weight: 700;
+}
+
 
 code {
     font-family: 'Blex Mono Nerd Font';
@@ -24,25 +39,23 @@ code {
     border-radius: 3px;
 }
 
-
-h1 {
-    color: #8fbcbb;
-}
-
+h1,
 h2 {
-    color: #8fbcbb;
+    color: var(--nord7);
+    margin-bottom: 2px;
 }
 
 a {
-    color: #5e81ac;
+    font-size: 16px;
+    color: var(--nord10);
 }
 
 a:hover {
-    color: #81a1c1;
+    color: var(--nord9);
 }
 
 .container {
-    background-color: #434c5e;
+    background-color: var(--nord2);
     border: none;
     border-radius: 10px;
     padding: 15px 20px;
@@ -55,26 +68,6 @@ a:hover {
 }
 
 .separator {
-    color: #5e81ac;
-    margin-left: 10px;
+    color: var(--nord10);
+    margin: 0 8px;
 }
-
-/*
-let s:nord0_gui="#2E3440"
-let s:nord1_gui="#3B4252"
-let s:nord2_gui="#434C5E"
-let s:nord3_gui=""
-let s:nord3_gui_bright="#616E88"
-let s:nord4_gui="#D8DEE9"
-let s:nord5_gui="#E5E9F0"
-let s:nord6_gui="#ECEFF4"
-let s:nord7_gui="#8FBCBB"
-let s:nord8_gui="#88C0D0"
-let s:nord9_gui="#81A1C1"
-let s:nord10_gui="#5E81AC"
-let s:nord11_gui="#BF616A"
-let s:nord12_gui="#D08770"
-let s:nord13_gui="#EBCB8B"
-let s:nord14_gui="#A3BE8C"
-let s:nord15_gui="#B48EAD"
-*/
