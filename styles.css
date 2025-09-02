@@ -37,11 +37,6 @@ p {
     line-height: 1.5;
 }
 
-code {
-    font-family: 'Blex Mono Nerd Font';
-    padding: 2px 4px;
-    border-radius: 3px;
-}
 
 .container {
     background-color: var(--bg);
@@ -62,18 +57,24 @@ code {
 }
 
 .button-group {
-    display: flex;
+    display: inline-block;
     justify-content: center;
-    gap: 10px;
 }
 
 .btn {
     background-color: var(--blue-dim);
     color: var(--fg1);
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.button-group .btn+.btn {
+    margin-left: 10px;
 }
 
 .btn:hover {

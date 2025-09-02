@@ -17,6 +17,13 @@ body {
     margin-bottom: 20px;
 }
 
+code {
+    font-family: 'Blex Mono Nerd Font';
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+
 @media (max-width: 800px) {
     .blog {
         margin-left: 1%;
