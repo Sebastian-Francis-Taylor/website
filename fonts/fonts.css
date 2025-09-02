@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Blex Mono Nerd Font';
+    src: url('./IBMPlexMono/BlexMonoNerdFont-Regular.ttf');
+    font-weight: 100, 900;
+    font-style: normal;
+}

@@ -1,0 +1,80 @@
+@import url("../fonts/fonts.css");
+
+body {
+    background-color: #2e3440;
+    color: #eceff4;
+    font-family: 'Open Sans', 'Courier New';
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.blog {
+    padding: 10px 20px;
+    border: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1%;
+    margin-bottom: 20px;
+}
+
+
+code {
+    font-family: 'Blex Mono Nerd Font';
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+
+h1 {
+    color: #8fbcbb;
+}
+
+h2 {
+    color: #8fbcbb;
+}
+
+a {
+    color: #5e81ac;
+}
+
+a:hover {
+    color: #81a1c1;
+}
+
+.container {
+    background-color: #434c5e;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+}
+
+.separator {
+    color: #5e81ac;
+    margin-left: 10px;
+}
+
+/*
+let s:nord0_gui="#2E3440"
+let s:nord1_gui="#3B4252"
+let s:nord2_gui="#434C5E"
+let s:nord3_gui=""
+let s:nord3_gui_bright="#616E88"
+let s:nord4_gui="#D8DEE9"
+let s:nord5_gui="#E5E9F0"
+let s:nord6_gui="#ECEFF4"
+let s:nord7_gui="#8FBCBB"
+let s:nord8_gui="#88C0D0"
+let s:nord9_gui="#81A1C1"
+let s:nord10_gui="#5E81AC"
+let s:nord11_gui="#BF616A"
+let s:nord12_gui="#D08770"
+let s:nord13_gui="#EBCB8B"
+let s:nord14_gui="#A3BE8C"
+let s:nord15_gui="#B48EAD"
+*/

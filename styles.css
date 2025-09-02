@@ -1,21 +1,22 @@
+@import url("fonts/fonts.css");
+
 body {
     background-color: #282828;
     color: #ebdbb2;
-    font-family: 'Blex Mono Nerd Font', 'Courier New', monospace;
-    background-image: none;
-    padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-bottom: 5%;
+    font-family: 'Open Sans', 'Courier New';
+    background-image: url('Background/stars.gif');
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    margin: 0;
 }
 
 a {
-    color: #fe8019;
+    color: #689d61;
     font-weight: bold;
 }
 
 a:hover {
-    color: #d65d0e;
+    color: #7ec07c;
 }
 
 h1 {
@@ -23,19 +24,30 @@ h1 {
     font-style: bold;
 }
 
+.tagline {
+    font-size: 18pt;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
 p {
     font-style: 24pt;
     font-style: normal;
+    line-height: 1.5;
+}
+
+code {
+    font-family: 'Blex Mono Nerd Font';
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 
 .container {
     background-color: #282828;
-    border-radius: 5px;
-    padding-top: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-    padding-bottom: 1%;
+    border: none;
+    border-radius: 10px;
 
+    padding: 15px 20px;
 
     display: flex;
     gap: 20px;
@@ -43,17 +55,58 @@ p {
     align-items: center;
 
     position: fixed;
-    bottom: 0;
+    bottom: 2%;
     left: 50%;
     transform: translateX(-50%);
-
-    width: 50%;
-    margin-bottom: 2%;
 }
 
-@font-face {
-    font-family: 'Blex Mono Nerd Font';
-    src: url('fonts/BlexMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #458588;
+    color: #ebdbb2;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #83a598;
+    color: #ebdbb2;
+}
+
+.content-wrapper {
+    padding-top: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 5%;
+    min-height: 100vh;
+}
+
+.title-section {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title {
+    margin: 0 0 20px 0;
+}
+
+.blog {
+    background: rgba(28, 28, 28, 0.6);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%;
+    margin-bottom: 100px;
 }

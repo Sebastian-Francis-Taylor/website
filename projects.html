@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian Francis Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="Background/starfield_alpha.png" as="image">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Projects</title>
+
+</head>
+
+<body>
+    <div class="blog">
+        <h1>An Infomercial For Nerds</h1>
+
+        <h2 id="reed-solomon-encoder-decoder">Reed-Solomon Encoder &amp; Decoder</h2>
+        <p>Have you ever wondered how CDs can still play even when they get scratched? I
+            certainly have, and when I was taking a course at university where we learned
+            about error correcting codes, I knew that I wanted to build a decoder myself.
+            What started out as an ambitious thought quickly turned into a week of intense
+            programming and a couple of all-nighters.</p>
+        <h3 id="how-it-works">How It Works</h3>
+        <p> A Reed-Solomon code works by adding some redundancy to the message that is being encoded, called parity
+            symbols. The nice thing with Reed-Solomon codes is that it can an amout of errors equal to half of the
+            parity symbols. With some added fancy math, the parity symbols can represent both the magnitude of the
+            errors and the location of them.
+        </p>
+        <h3 id="the-core-project">The Core Project</h3>
+        <p>The assignment for the university project was to build a Reed-Solomon decoder
+            in C. I wanted the project to be a similar to the custom hardware that a
+            decoder might run on in the real world, which made C the obvious choice. Only
+            one problem, I had never written a whole program in C. My previous experience
+            with the language came mainly from reading <em>C Programming: A Modern Approach</em>
+            and working through some programming exercises, I was given during my first semester.</p>
+        <p>My first step was to actually understand the steps of a Reed-Solomon decoder,
+            for this I consulted the lovely teaching assistants for the course. After much
+            head scratching, the process became vaguely clear to me. Step 1: represent
+            polynomials as arrays. Step 2: Do complex math on polynomials. Step 3:
+            Debug.</p>
+        <p>Jokes aside, a Reed-Solomon decoder works by interpreting the data you have as
+            a polynomial within a finite field. This means that something like the array
+            <code>[1,2,3,4]</code> could instead be viewed as the polynomial \(1+2x+3x^2+4x^3\), which
+            is called <em>little-endian</em>. This is the core data structure of my specific
+            implementation. The benefits of this, is that the index of a given element
+            corresponds to \(x\)'s exponent. Another approach would be to use <em>big-endian</em>,
+            meaning that the same array would represent \(4x^3+3x^2+2x+1\). The choice of
+            endianness is however entirely personal preference. I would like to say that I
+            picked this data structure immediately and stuck to it throughout the whole
+            program. This couldn't be further from the truth I ended up mixing my endians
+            up frequently, which caused functions to be entirely incompatible.
+        </p>
+        <p>After I had elegantly decided on a data structure, it was time to get coding. I
+            had broken the program into 5 functions that needed to be implemented for the
+            program to work, along with a wrapper function. Luckily, I had been given a
+            holy grail. A book that, in detail, went over the mathematical functions needed
+            to decode a Reed-Solomon code. This books went over every single formula that I
+            needed to convert into a function.</p>
+        <p>After coding each function to the best of my ability the code was
+            ready to be tested, which brought on more problems. I was aware that the
+            program required a makefile to compile, I had never made a makefile
+            before. However, this wasn't the end of the world, through the great gift of
+            the internet, it was easy to find some resources on how to compile my program.</p>
+        <p>This was it, after a lot of programming, it was time. The first time I ran the
+            decoder, I was overwhelmed by the speed that C had to offer. Before this, I had
+            only seen a decoder written in python, I was in awe! However, that feeling
+            quickly faded away, the decoder didn't work. I had no clue why it wasn't
+            working, which left me with only one option. Check every single functions
+            calculations by hand.</p>
+        <p>Of course, that was a slight lie. I did have to look through the calculations,
+            but I could simply use CAS software to do the calculating for me. One thing was quickly apparent, my
+            implementation of the Euclidean Algorithm was spewing out nonsense. This sent me into a debugging frenzy, I
+            spent a couple days and an all-nighter trying everything. Rewriting the function, checking the function
+            against
+            pseudocode making sure that the arrays being passed into the function were correct and a whole lot more.
+            After
+            almost being defeated, I was looking through the code with a teaching assistant. That's where he came with a
+            revolutionary idea. What if I had mixed up my endians. My eyes lit up, I wrote a quick function to reverse
+            arrays. Took a long hard look at the codebase, and strategically reversed arrays so that the endianness
+            would
+            suit the function. It worked, after a couple sleepless nights, more energy drinks than is healthy, it
+            worked.
+        </p>
+        <p>The only thing left for the project, was to rewrite some functions so that the
+            whole program used the pesky little-endians. After that, I tested the speed of
+            my decoder using the <code>time</code> command included on most Linux systems. The decoder
+            was blazingly fast, for my standards that is, it took 0.002 seconds to decode a
+            message that was 255 bytes long.</p>
+        <h3 id="the-encoder">The Encoder</h3>
+        <p>The project was finished, but I was left with an empty void. What good was a
+            decoder if I didn't have an encoder to go along with it? I knew that the
+            encoder was much simpler than the decoder, I was even told it would be easy.
+            Then my work began, I did a little research and quickly began coding.</p>
+        <p>The formula for systematic encoding is actually relatively simple. The main
+            showstopper was that I needed a generator polynomial. Some quick online
+            research told me that it depends on field size, no worries I thought, I know
+            the field size. However, it was a fruitless endeavour, I couldn't for the life
+            of me find anything, so I was left with one option. Write a python script to
+            compute the generator polynomial for my field size. The script was not that
+            complicated, there exists a python package to handle Galois field arithmetic
+            aptly named <code>Galois</code> so it was smooth sailing.</p>
+        <p>I wrote the encoder, compiled and ran it and once again, the endians came to
+            halt my progress. Fundamentally, the decoder works my adding parity symbols to
+            the array that is getting encoded. The location of the parity symbols are
+            dependant on your data structure, and most implementations I found online used
+            big-endian, meaning that the parity symbols needed to be padded onto the end of
+            the array. No problem though, I just added them to the front instead and it was
+            smooth sailing right? Wrong. The program was once again spewing nonsense.</p>
+        <p>I was back at the debugging station. I tried reversing the order of parity
+            symbols, it didn't work. I tried moving the parity symbols to the back, it
+            didn't work. Remember earlier when I said that most implementations I could
+            find used big-endian? Well the Galois python package, does this. The same
+            package I used to calculate my generator polynomial. I figured, I had thought
+            ahead for once, and without thinking, reversed the generator array before adding
+            into the program. This was bullet proof I thought, but it was in reality the
+            source of a couple of hours of debugging. Once I had tried everything else, I
+            on a whim decided to flip the generator array, revealing the problem, the
+            encoder worked. Now my previously lonely decoder had a friend. </p>
+    </div>
+
+    <center>
+        <div class="container">
+            <a href="./index.html">Go Back</a>
+        </div>
+    </center>
+</body>
+
+</html>
