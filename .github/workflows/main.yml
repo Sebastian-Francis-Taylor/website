@@ -19,3 +19,7 @@ jobs:
         protocol: ftps
         security: strict
         server-dir: /public_html/
+        exclude: |
+          **/.git*
+          **/.github/**
+          **/.git*/**
