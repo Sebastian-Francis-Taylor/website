@@ -18,3 +18,4 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         security: strict
+        server-dir: /public_html/
