@@ -1,4 +1,18 @@
-- name: Deploy via SFTP  
+name: Deploy to SFTP Server
+
+on:
+  push:
+    branches: [ prod ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy via SFTP
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.FTP_SERVER }}
@@ -6,3 +20,10 @@
         password: ${{ secrets.FTP_PASSWORD }}
         local_path: './'
         remote_path: '/public_html/'
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/.DS_Store
+          **/README.md
+          **/.github/**
