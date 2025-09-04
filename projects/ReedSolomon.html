@@ -34,10 +34,11 @@
             What started out as an ambitious thought quickly turned into a week of intense
             programming and a couple of all-nighters.</p>
         <h3 id="how-it-works">How It Works</h3>
-        <p> A Reed-Solomon code works by adding some redundancy to the message that is being encoded, called parity
-            symbols. The nice thing with Reed-Solomon codes is that it can an amout of errors equal to half of the
-            parity symbols. With some added fancy math, the parity symbols can represent both the magnitude of the
-            errors and the location of them.
+        <p> A Reed–Solomon code works by adding extra information to the original message, called parity symbols. These
+            parity symbols provide redundancy, which allows the code to detect and fix errors. The neat thing is that a
+            Reed–Solomon code can correct up to half as many errors as the number of parity symbols added. Thanks to
+            some clever math, the parity symbols capture both where the errors happened and how big they are. With this
+            information, a decoding program can reconstruct the original message, even if some parts were corrupted.
         </p>
         <h3 id="the-core-project">The Core Project</h3>
         <p>The assignment for the university project was to build a Reed-Solomon decoder
