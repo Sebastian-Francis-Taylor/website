@@ -1,24 +1,17 @@
-name: Deploy to SFTP Server
-
-on:
-  push:
-    branches: [ prod ]
-
+on: push
+branches: [ prod ]
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-    
     steps:
-    - name: Checkout code
+    - name: 🚚 Get latest code
       uses: actions/checkout@v4
-      
-    - name: Deploy via SFTP
-      uses: pressidium/lftp-mirror-action@v1
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
       with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        pass: ${{ secrets.FTP_PASSWORD }}
-        settings: 'sftp:auto-confirm yes'
-        localDir: './'
-        remoteDir: '/public_html/'
-        options: '--verbose --reverse --delete --exclude .git/ --exclude .github/ --exclude README.md'
+        server: ${{ secrets.FTP_SERVER}}
+        username: ${{ secrets.FTP_USERNAME}}
+        password: ${{ secrets.FTP_PASSWORD }}
