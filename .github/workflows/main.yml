@@ -20,10 +20,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local_path: './'
         remote_path: '/public_html/'
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.DS_Store
-          **/README.md
-          **/.github/**
