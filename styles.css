@@ -57,8 +57,10 @@ p {
 }
 
 .button-group {
-    display: inline-block;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .btn {
