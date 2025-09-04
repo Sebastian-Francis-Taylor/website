@@ -13,10 +13,12 @@ jobs:
       uses: actions/checkout@v4
       
     - name: Deploy via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      uses: pressidium/lftp-mirror-action@v1
       with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local_path: './'
-        remote_path: '/public_html/'
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        pass: ${{ secrets.FTP_PASSWORD }}
+        settings: 'sftp:auto-confirm yes'
+        localDir: './'
+        remoteDir: '/public_html/'
+        options: '--verbose --reverse --delete --exclude .git/ --exclude .github/ --exclude README.md'
