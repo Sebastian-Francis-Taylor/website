@@ -11,10 +11,7 @@ body {
 
 .blog {
     padding: 10px 20px;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 1%;
-    margin-bottom: 20px;
+    margin: 1% 25% 20px;
     font-size: 1.2em;
 }
 
@@ -23,7 +20,6 @@ code {
     padding: 2px 4px;
     border-radius: 3px;
 }
-
 
 @media (max-width: 800px) {
     .blog {
@@ -34,20 +30,9 @@ code {
 
 .muted-text {
     color: var(--nord4);
-    font-size: 12px;
+    font-size: 0.75em;
     margin-top: 2px;
     margin-bottom: 15px;
-}
-
-.cool-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Blex Mono Nerd Font', monospace;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--nord10);
-    gap: 8px;
 }
 
 .title-block {
@@ -60,7 +45,7 @@ code {
     justify-content: center;
     align-items: center;
     font-family: 'Blex Mono Nerd Font', monospace;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 700;
     color: var(--nord10);
     gap: 8px;
@@ -80,8 +65,9 @@ h2 {
 }
 
 a {
-    font-size: 16px;
+    font-size: 1em;
     color: var(--nord10);
+    text-decoration: none;
 }
 
 a:hover {
@@ -90,14 +76,12 @@ a:hover {
 
 .container {
     background-color: var(--nord2);
-    border: none;
     border-radius: 10px;
     padding: 15px 20px;
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-
     width: fit-content;
 }
 
