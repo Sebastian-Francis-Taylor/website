@@ -12,6 +12,7 @@ body {
 }
 
 a {
+    text-decoration: none;
     color: var(--aqua-dim);
     font-weight: bold;
 }
@@ -29,6 +30,7 @@ h1 {
     font-size: 18pt;
     font-weight: normal;
     margin-top: 10px;
+    color: var(--fg3);
 }
 
 p {
@@ -60,23 +62,19 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    gap: 10px;
 }
 
 .btn {
     background-color: var(--blue-dim);
     color: var(--fg1);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-}
-
-.button-group .btn+.btn {
-    margin-left: 10px;
+    width: 150px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .btn:hover {
@@ -114,8 +112,4 @@ p {
     margin-right: 20%;
     margin-top: 1%;
     margin-bottom: 100px;
-}
-
-margin-top: 1%;
-margin-bottom: 100px;
 }
