@@ -86,3 +86,25 @@ a:hover {
     color: var(--nord10);
     margin: 0 8px;
 }
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--nord3);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--nord10);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--nord3) var(--nord2);
+}
