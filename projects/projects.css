@@ -4,7 +4,7 @@
 body {
     background-color: var(--nord0);
     color: var(--nord6);
-    font-family: 'Open Sans', 'Courier New';
+    font-family: 'IBM Plex Sans';
     margin: 1% auto 20px;
 }
 
@@ -23,8 +23,6 @@ code {
     padding: 2px 4px;
     border-radius: 3px;
 }
-
-
 
 .title-block {
     display: inline-block;
