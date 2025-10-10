@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    <link rel="icon" href="/favicons/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian Francis Taylor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>DnD Combat Assistant</title>
+
+</head>
+
+<body>
+    <div class="blog">
+        <div class="title-block">
+            <h1 class="main-title">An Infomercial For Nerds</h1>
+            <h2 class="cool-line">{<span></span>}</h2>
+        </div>
+        <div>
+            <a href="/">Home</a>
+            <span class="separator"> | </span>
+            <a href="projects.html"> Back </a>
+            <span class="separator"> | </span>
+            <a href="https://github.com/Sebastian-Francis-Taylor/Reed-Solomon-C" target="_blank">GitHub Repository
+            </a>
+            <span class="separator"> | </span>
+            <a href="../aboutme.html">About Me</a>
+        </div>
+
+        <h2 id="DnD combat assistant">DnD combat Assistant</h2>
+        <p>
+            I really enjoy playing tabletop RPGs, although I find they all suffer from one
+            issue: the god damn combat rules. There is nothing worse than being in the
+            zone, and then someone else says, "uhmm, actually, you can't do that." Now,
+            some people really enjoy reading the rulebook front to back, but I really
+            don't. It is just so much time for so little reward. There was only one
+            solution to this problem: spend way more time than it would take reading the
+            friendly manual learning a new programming paradigm, making a program to do it
+            for me.
+        </p>
+
+        <p>I decided to create the CLI application in F#. I have been curious about
+            functional languages for a while, but the specific language was picked partly
+            for platform independence and partly since I would need to know it for some
+            courses at university. I had now decided on my stack, I had decided on a
+            project, I just needed to learn the basics of F#. Learning functional
+            programming turned out to be a little more complicated than I previously
+            thought. The implication of immutability hadn't really set in, and recursion
+            was something I had only read about in books.</p>
+
+        <p> Since the scope of this project was to learn functional programming and not
+            create the most perfect DnD helper, I decided to limit the scope. Character
+            creation was quickly thrown out the window — I barely understand it with pencil
+            and paper. I realized that there are a million homebrewed ways of doing it and
+            decided it would be too much to implement it in the application. My dungeon
+            master enjoys magical plus-one weapons and sometimes creating something from
+            scratch with custom stats. Although this is fun, it is hell for a universal
+            application — meaning only one thing: out the window. The simple solution is to
+            just have weapons as a JSON object and add them as we go along. </p>
+
+        <p> So the plan was simple: make a simple application where I can go through my
+            character's combat loop without forgetting how my character works. Simple,
+            right? Wrong. Dungeons and Dragons is the most convoluted system of a billion
+            conditions. If your dungeon master decides that your character has some form of
+            natural advantage, you get what is aptly named “advantage,” meaning you roll to
+            hit twice and pick the best one. There is also “disadvantage,” where you roll
+            to hit twice and pick the worst. Not too bad, right? Don't worry, there is
+            more. You can also have multi-hit abilities — if you roll a natural 20, you hit
+            twice. All of these abilities combine and stack, leading to a logical mess. </p>
+
+        <p> Dealing with the logical mess took some time and consulting with friends who
+            know way more than me about DnD. After a while, I had the core logic down and
+            could start implementing the logic. This is where functional programming really
+            started to shine. I found it much easier to debug by reading the code. I rarely
+            had a moment of "wait, how on earth did x become 5?" And recursion made a lot
+            of sense for game combat loops.</p>
+
+        <p> The program overall didn't take much more than a week to complete during my
+            summer break. When it was all done, I was ready. My group would be impressed;
+            they would cheer; they would hail me an engineering god. Then my dungeon master
+            got too busy to prepare, so we decided to go on a hiatus of undefined length. </p>
+    </div>
+
+    <center>
+        <center>
+            <a href="projects.html">[ Go Back ]</a>
+        </center>
+    </center>
+</body>
+
+</html>
