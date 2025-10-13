@@ -47,7 +47,11 @@ code {
     height: 4px;
 }
 
-h1,
+h1 {
+    color: var(--nord7);
+    margin-bottom: 2px;
+}
+
 h2 {
     color: var(--nord7);
     margin-bottom: 2px;
@@ -67,7 +71,7 @@ a {
 }
 
 a:hover {
-    color: var(--nord9);
+    color: var(--nord14);
 }
 
 .container {
