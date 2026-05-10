@@ -1,68 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="icon" href="/favicons/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
 
-<head>
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="icon" href="/favicons/favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
-
-    <meta charset="UTF-8">
-    <meta name="author" content="Sebastian Francis Taylor">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projects.css">
-    <link rel="preload" href="fonts/IBMPlexSans/IBMPlexSans-VariableFont_wdth,wght.ttf" as="font" type="font/ttf"
-        crossorigin>
-    <link rel="preload" href="fonts/IBMPlexMono/BlexMonoNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Sebastian Francis Taylor" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projects.css" />
+    <link
+      rel="preload"
+      href="fonts/IBMPlexSans/IBMPlexSans-VariableFont_wdth,wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/IBMPlexMono/BlexMonoNerdFont-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
     <title>Projects</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="blog">
+      <div class="title-block">
+        <h1 class="main-title">An Infomercial For Nerds</h1>
+        <h2 class="cool-line">{<span></span>}</h2>
+      </div>
+      <div>
+        <a href="/">Home</a>
+        <span class="separator"> | </span>
+        <a href="../aboutme.html">About Me</a>
+        <span class="separator"> | </span>
+        <a href="https://github.com/Sebastian-Francis-Taylor/" target="_blank"
+          >GitHub</a
+        >
+      </div>
 
-        <div class="title-block">
-            <h1 class="main-title">An Infomercial For Nerds</h1>
-            <h2 class="cool-line">{<span></span>}</h2>
+      <h2 id="DnD combat assistant">DnD Combat Assistant</h2>
+      <h6>Developed in F# | 10-10-2025</h6>
+      <p>
+        I really enjoy playing tabletop RPGs, although I find they all suffer
+        from one issue: the god damn combat rules. There is nothing worse than
+        being in the zone, and then someone else says, "uhmm, actually, you
+        can't do that." Now, some people really enjoy reading the rulebook front
+        to back, but I really don't. It just takes so much time for so little
+        reward. There was only one logical solution to this problem: spend way
+        more time than it would take to learn the rules, learning a new
+        programming paradigm and making a program to do it for me.
+      </p>
+      <a href="dnd-helper.html">[ Read More ]</a>
+
+      <h2 id="reed-solomon-encoder-decoder">
+        Reed-Solomon Encoder &amp; Decoder
+      </h2>
+      <h6>Developed in C | 02-09-2025</h6>
+      <p>
+        Have you ever wondered how CDs can still play even when they get
+        scratched? I certainly have, and when I was taking a course at
+        university where we learned about error correcting codes, I knew that I
+        wanted to build a decoder myself. What started out as an ambitious
+        thought quickly turned into a week of intense programming and a couple
+        of all-nighters.
+      </p>
+      <a href="ReedSolomon.html">[ Read More ]</a>
+
+      <!--
+        <div class="container" style="text-align: center;">
+            <a href="/">Go Back</a>
         </div>
-        <div>
-            <a href="/">Home</a>
-            <span class="separator"> | </span>
-            <a href="../aboutme.html">About Me</a>
-            <span class="separator"> | </span>
-            <a href="https://github.com/Sebastian-Francis-Taylor/" target="_blank">GitHub</a>
-        </div>
-
-        <h2 id="DnD combat assistant">DnD Combat Assistant</h2>
-        <h6> Developed in F# | 10-10-2025</h6>
-        <p>
-            I really enjoy playing tabletop RPGs, although I find they all suffer from one
-            issue: the god damn combat rules. There is nothing worse than being in the
-            zone, and then someone else says, "uhmm, actually, you can't do that." Now,
-            some people really enjoy reading the rulebook front to back, but I really
-            don't. It just takes so much time for so little reward. There was only one logical
-            solution to this problem: spend way more time than it would take to learn the rules,
-            learning a new programming paradigm and making a program to do it for me.
-        </p>
-        <a href="dnd-helper.html">[ Read More ]</a>
-
-        <h2 id="reed-solomon-encoder-decoder">Reed-Solomon Encoder &amp; Decoder</h2>
-        <h6> Developed in C | 02-09-2025</h6>
-        <p>Have you ever wondered how CDs can still play even when they get scratched? I
-            certainly have, and when I was taking a course at university where we learned
-            about error correcting codes, I knew that I wanted to build a decoder myself.
-            What started out as an ambitious thought quickly turned into a week of intense
-            programming and a couple of all-nighters.</p>
-        <a href="ReedSolomon.html">[ Read More ]</a>
-
-        <center>
-            <!---
-            <div class="container">
-                <a href="/">Go Back</a>
-            </div>
-            --->
-
-        </center>
-</body>
-
+        -->
+    </div>
+  </body>
 </html>
