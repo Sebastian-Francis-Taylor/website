@@ -103,6 +103,10 @@ p {
     margin: 0 0 20px 0;
 }
 
+.center {
+    text-align: center;
+}
+
 .blog {
     background: var(--bg_h);
     background: rgba(29, 32, 33, 0.6);

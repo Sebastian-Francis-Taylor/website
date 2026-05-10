@@ -8,6 +8,10 @@ body {
   margin: 1% auto 20px;
 }
 
+.center {
+  text-align: center;
+}
+
 .blog {
   max-width: 48rem;
   margin: 0 auto;
