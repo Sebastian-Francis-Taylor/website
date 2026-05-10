@@ -12,6 +12,13 @@ body {
   text-align: center;
 }
 
+.meta {
+  font-size: 0.9em;
+  color: var(--nord4, #d8dee9);
+  margin: -0.5em 0 1em;
+  font-style: italic;
+}
+
 .blog {
   max-width: 48rem;
   margin: 0 auto;
